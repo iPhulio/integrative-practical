@@ -71,7 +71,48 @@
 
     <footer id="contacto">
         <h2>Contacto</h2>
-        <p>Formulario de contacto o información...</p>
+        <form>
+            <div class="form-input-wrapper">
+              <label for="name">Nombre</label>
+              <input type="text" class="form-input" id="name" placeholder="Ingrese su nombre"> 
+            </div>
+            <div class="form-input-wrapper">
+                <label for="lastname">Apellido</label>
+                <input type="text" class="form-input" id="lastname" placeholder="Ingrese su apellido"> 
+            </div>
+            <div class="form-input-wrapper">
+                <label for="email">Correo electrónico</label>
+                <input type="email" class="form-input" id="email" placeholder="Ingrese su correo electrónico"> 
+            </div>
+            <div class="form-input-wrapper">
+                <label for="location">Ubicación</label>
+                <select class="form-input" id="location">
+                  <option>CABA</option>
+                  <option>Provincia de Buenos Aires</option>
+                  <option>Provincias del Interior</option>
+                </select>
+            </div>
+            <div class="form-input-wrapper">
+                <label>Tipo de Servicio:</label>
+                <div class="form-chk">
+                    <input class="form-chk-input" type="checkbox" id="installation">
+                    <label class="form-chk-label" for="installation">
+                      Instalación
+                    </label>
+                </div>
+                <div class="form-chk">
+                    <input class="form-chk-input" type="checkbox" id="manufactury">
+                    <label class="form-chk-label" for="manufactury">
+                      Fabricación  
+                    </label>
+                </div>
+            </div>
+            <div class="form-input-wrapper">
+                <label for="image">Referencia visual de ubicación</label>
+                <input type="file" id="image" class="form-file">
+            </div>
+            <button type="submit" class="btn-submit">ENVIAR</button>
+        </form>
     </footer>
 
     <!-- JavaScript para desplazamiento suave -->

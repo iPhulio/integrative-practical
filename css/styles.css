@@ -115,3 +115,54 @@ html {
     font-size: 30px;
     color: black;
 }
+
+form .form-input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: 6px 12px;    
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+form .form-input::placeholder {
+    font-style: oblique;
+}
+
+form .form-input-wrapper {
+    margin-bottom: 16px;
+}
+
+form .form-chk {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+
+.form-chk > .form-chk-input {
+    position: absolute;
+    margin-top: 4.8px;
+    margin-left: -20px;
+}
+
+.form-chk > .form-chk-label {
+    margin-bottom: 0;
+}
+
+form .form-file {
+    width: 100%;
+}
+
+.btn-submit {
+    min-width: 8rem;
+    height: calc(1.5em + .75rem + 2px);
+    background-color: #2c78eb;
+    color: #f4f4f4;
+    border-color: #0d0adb ;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
