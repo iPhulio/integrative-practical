@@ -19,6 +19,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -60,34 +61,46 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px; /* Espacio entre columnas */
+    gap: 20px; 
 }
 
 .col {
-    flex: 1; /* Ajustar el tamaño de las columnas */
+    flex: 1; 
 }
 
 .carousel-container {
-    max-width: 50%; /* Limitar el ancho del carrusel */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .text-container {
-    max-width: 50%; /* Limitar el ancho del texto */
+    max-width: 50%; 
 }
 
 .carousel {
     position: relative;
     max-width: 100%;
+    height: 100%; 
+    overflow: hidden; 
 }
 
 .carousel-inner {
     display: flex;
+    align-items: center;
+    height: 600px;
 }
 
 .carousel-item {
-    display: none;
-    flex: 1 0 100%;
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .carousel-item.active {
@@ -98,9 +111,15 @@ html {
 .carousel-control-next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(0%);
     cursor: pointer;
     user-select: none;
+    width: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .carousel-control-prev {
@@ -116,6 +135,7 @@ html {
     color: black;
 }
 
+/* formulario */ 
 form .form-input {
     display: block;
     width: 100%;
@@ -126,6 +146,11 @@ form .form-input {
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 4px;
+}
+
+form .form-input-wrapper.required > label:after {
+    content:" *";
+    color: red;
 }
 
 form .form-input::placeholder {
@@ -161,8 +186,81 @@ form .form-file {
     height: calc(1.5em + .75rem + 2px);
     background-color: #2c78eb;
     color: #f4f4f4;
-    border-color: #0d0adb ;
+    border-color: #615f89 ;
     border-radius: 4px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+.btn-submit:hover {
+    background-color: #123468;
+}
+
+/* Estilos de contacto */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact-form {
+    flex: 1 1 45%;
+    margin-right: 20px;
+}
+
+.company-info {
+    flex: 1 1 45%;
+}
+
+.company-info p {
+    margin: 10px 0;
+}
+
+.company-info a {
+    color: #2c78eb;
+    text-decoration: none;
+}
+
+.company-info a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-form, .company-info {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-container, .text-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    header, section, footer {
+        padding: 30px 10px;
+    }
+}
