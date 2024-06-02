@@ -70,3 +70,17 @@ const formValidation = (event) => {
     alert('Su solicitud fue registrada exitosamente')
     document.getElementById("contact-form").reset();
 }
+
+/* boton de animacion de servicios */
+const showMoreService = () => {
+    const moreService = document.getElementById('more-service');
+    const buttonMoreService = document.getElementById('button-more-service');
+    if (moreService.classList.contains('is-visible')){
+        moreService.classList.remove('is-visible');
+        buttonMoreService.innerText="Ver más";
+    }
+    else{
+        moreService.classList.add('is-visible');
+        buttonMoreService.innerText="Ver menos";
+    }    
+}
